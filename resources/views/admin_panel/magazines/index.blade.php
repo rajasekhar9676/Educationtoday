@@ -16,8 +16,8 @@
                 <th>Year</th>
                <th>Actions</th>
             </tr> 
-        </thead>
-        <tbody>
+        </thead>  
+        <tbody>  
             @foreach ($magazines as $index => $magazine)
                 <tr>
                     <td>{{ $index + 1 }}</td>

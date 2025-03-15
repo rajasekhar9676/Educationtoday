@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title', 'Purple Admin')</title>
+    <title>@yield('title', 'Education Today Admin')</title>
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="{{ asset('admin/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/vendors/css/vendor.bundle.base.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/vendors/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
+    <!-- <script src="{{ asset('admin/assets/vendors/js/vendor.bundle.base.js') }}"></script> -->
 
     <!-- Layout Styles -->
     <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css') }}">
@@ -100,21 +101,26 @@
         </div>
     </div>
     <!-- JS Scripts -->
-    <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
+
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="admin/assets/vendors/chart.js/chart.umd.js"></script>
-    <script src="admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+ 
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="admin/assets/js/off-canvas.js"></script>
-    <script src="admin/assets/js/misc.js"></script>
-    <script src="admin/assets/js/settings.js"></script>
-    <script src="admin/assets/js/todolist.js"></script>
-    <script src="admin/assets/js/jquery.cookie.js"></script>
+
+    <script src="{{ asset('admin/assets/vendors/js/vendor.bundle.base.js') }}"></script>
+    <script src="{{ asset('admin/assets/vendors/chart.js/chart.umd.js') }}"></script>
+    <script src="{{ asset('admin/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/off-canvas.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/misc.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/settings.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/todolist.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/jquery.cookie.js') }}"></script>
+  
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="admin/assets/js/dashboard.js"></script>
+   
+    <script src="{{ asset('admin/assets/js/dashboard.js') }}"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".nav-link[data-bs-toggle='collapse']").forEach(link => {

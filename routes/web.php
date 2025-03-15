@@ -41,8 +41,6 @@ Route::get('/', function () {
 //     ');
 // });
 
-
-
 // Route::get('/buttons', function () {
 //     return view('buttons');
 // })->name('buttons');
@@ -54,8 +52,6 @@ Route::get('/', function () {
 // Route::get('/typography', function () {
 //     return view('typography');
 // })->name('typography');
-
-
 
 // Route::get('/register', function () {
 //     return view('auth.register');
@@ -80,14 +76,9 @@ Route::get('/', function () {
 
 // Route::resource('blog_posts', BlogPostController::class);
 
-
-
-
-
 // Route::get('/contacts', [ContactController::class, 'index'])->name('contact.index');
 // Route::get('/contacts/{contact}', [ContactController::class, 'show'])->name('contact.show');
 // Route::delete('/contacts/{contact}', [ContactController::class, 'destroy'])->name('contact.destroy');
-
 
 
 Route::get('/contact', function () {
@@ -110,9 +101,6 @@ Route::get('/blog-details', function () {
 Route::get('/category', function () {
     return view('blogs.category');
 });
-
-
-
 
 Route::post('ckeditor/upload', [CKEditorController::class, 'upload'])->name('ckeditor.upload');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

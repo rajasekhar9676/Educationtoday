@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasFactory;
+    protected $fillable = ['name'];
 
-    protected $fillable = ['name']; // Allow mass assignment
+    public function magazines()
+    {
+        return $this->hasMany(Magazine::class, 'category_id');
+    }
 }
 

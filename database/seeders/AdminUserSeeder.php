@@ -12,11 +12,13 @@ class AdminUserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Admin',
-            'email' => 'raj@gmail.com',
-            'password' => Hash::make('raj123'), // Hashed password
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin123'), // Hashed password
             'is_admin' => 1, // Ensure you have this column in your users table
             'created_at' => now(),
             'updated_at' => now(),
         ]);
     }
 }
+
+

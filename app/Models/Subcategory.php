@@ -14,7 +14,13 @@ class Subcategory extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function magazines()
+    {
+        return $this->hasMany(Magazine::class, 'subcategory_id');
+    }
 }
+
 
 
 

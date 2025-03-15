@@ -4,7 +4,7 @@
     <h2>Add New Magazine</h2>
     <form method="POST" action="{{ route('magazines.store') }}" enctype="multipart/form-data">
         @csrf
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label class="form-label">Category</label>
             <select name="category_id" class="form-control" required>
                 <option value="">Select Category</option>
@@ -22,7 +22,30 @@
                     <option value="{{ $subcategory->id }}">{{ $subcategory->name }}</option>
                 @endforeach
             </select>
-        </div>
+        </div> -->
+     <!-- Category Selection or New Entry -->
+     <div class="mb-3">
+    <label class="form-label">Category</label>
+    <select name="category_id" id="category" class="form-control">
+        <option value="">Select Category</option>
+        @foreach ($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+        @endforeach
+    </select>
+    <input type="text" name="new_category" id="new_category" class="form-control mt-2 d-none" placeholder="Enter New Category">
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Subcategory</label>
+    <select name="subcategory_id" id="subcategory" class="form-control">
+        <option value="">Select Subcategory</option>
+        @foreach ($subcategories as $subcategory)
+            <option value="{{ $subcategory->id }}">{{ $subcategory->name }}</option>
+        @endforeach
+    </select>
+    <input type="text" name="new_subcategory" id="new_subcategory" class="form-control mt-2 d-none" placeholder="Enter New Subcategory">
+</div>
+
 
         <div class="mb-3">
             <label class="form-label">Name</label>
@@ -68,4 +91,42 @@
         <button type="submit" class="btn btn-success">Save</button>
     </form>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let categoryDropdown = document.getElementById("category");
+    let subcategoryDropdown = document.getElementById("subcategory");
+    let newCategoryInput = document.getElementById("new_category");
+    let newSubcategoryInput = document.getElementById("new_subcategory");
+
+    // Function to toggle category input field
+    function toggleCategoryInput() {
+        if (categoryDropdown.value === "") {
+            newCategoryInput.classList.remove("d-none");
+            newCategoryInput.setAttribute("required", "true");
+        } else {
+            newCategoryInput.classList.add("d-none");
+            newCategoryInput.removeAttribute("required");
+        }
+    }
+
+    // Function to toggle subcategory input field
+    function toggleSubcategoryInput() {
+        if (subcategoryDropdown.value === "") {
+            newSubcategoryInput.classList.remove("d-none");
+            newSubcategoryInput.setAttribute("required", "true");
+        } else {
+            newSubcategoryInput.classList.add("d-none");
+            newSubcategoryInput.removeAttribute("required");
+        }
+    }
+
+    // Event Listeners
+    categoryDropdown.addEventListener("change", toggleCategoryInput);
+    subcategoryDropdown.addEventListener("change", toggleSubcategoryInput);
+});
+</script>
+
 @endsection
+
+

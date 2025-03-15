@@ -17,7 +17,7 @@
 
     <!-- Dashboard -->
     <li class="nav-item">
-    <a class="nav-link" href="">
+    <a class="nav-link" href="/admin_panel">
         <span class="menu-title">Dashboard</span>
         <i class="mdi mdi-view-dashboard menu-icon"></i>
       </a>
@@ -55,7 +55,7 @@
 
 
     <!-- Organization Lists -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false">
         <span class="menu-title">Organization Lists</span>
         <i class="mdi mdi-office-building menu-icon"></i>
@@ -65,15 +65,15 @@
           <li class="nav-item"><a class="nav-link" href="#">Organization</a></li>
         </ul>
       </div>
-    </li>
+    </li> -->
 
     <!-- Organization Basic Info -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">
         <span class="menu-title">Organization Basic Info</span>
         <i class="mdi mdi-information menu-icon"></i>
       </a>
-    </li>
+    </li> -->
 
     <!-- Register -->
     <li class="nav-item">
@@ -84,50 +84,89 @@
     </li>
 
     <!-- Pre-School Listing -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">
         <span class="menu-title">Pre-School Listing</span>
         <i class="mdi mdi-school menu-icon"></i>
       </a>
-    </li>
+    </li> -->
 
     <!-- School Listing -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">
         <span class="menu-title">School Listing</span>
         <i class="mdi mdi-bank menu-icon"></i>
       </a>
-    </li>
+    </li> -->
 
     <!-- College Listing -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">
         <span class="menu-title">College Listing</span>
         <i class="mdi mdi-school-outline menu-icon"></i>
       </a>
-    </li>
+    </li> -->
 
     <!-- School Leads -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">
         <span class="menu-title">School Leads</span>
         <i class="mdi mdi-account-group menu-icon"></i>
       </a>
-    </li>
+    </li> -->
 
     <!-- Vote -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">
         <span class="menu-title">Vote</span>
         <i class="mdi mdi-vote menu-icon"></i>
       </a>
-    </li>
+    </li> -->
 
     <!-- Magazine -->
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <a class="nav-link" href={{ route('magazines.index') }}>
         <span class="menu-title">Magazine</span>
         <i class="mdi mdi-book-open-variant menu-icon"></i>
+      </a>
+    </li>
+  
+    <li class="nav-item">
+  <a class="nav-link" data-bs-toggle="collapse" href="#Events" aria-expanded="false">
+    <span class="menu-title">Events</span>
+    <i class="mdi mdi-folder-outline menu-icon"></i>
+  </a>
+  <div class="collapse" id="Events">
+    <ul class="nav flex-column sub-menu">
+      <li class="nav-item"><a class="nav-link" href="{{ route('events.sponsors.index') }}">Sponsors</a></li>
+      <!-- <a class="nav-link" href="{{ route('events.sponsors.index') }}">Sponsors</a> -->
+
+      <li class="nav-item"><a class="nav-link" href="{{ route('events.speakers.index') }}">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ route('events.faqs.index') }}">FAQ</a></li>
+    </ul>
+  </div>
+</li>
+
+
+<li class="nav-item">
+  <a class="nav-link" data-bs-toggle="collapse" href="#adveristment" aria-expanded="false">
+    <span class="menu-title">Adveristment</span>
+    <i class="mdi mdi-pencil menu-icon"></i>
+  </a>
+  <div class="collapse" id="adveristment">
+    <ul class="nav flex-column sub-menu">
+      <li class="nav-item"><a class="nav-link" href="{{ route('advertisements.index') }}">Banner Adveristment</a></li>
+      <!-- <li class="nav-item"><a class="nav-link" href="{{ route('blog_subcategories.index') }}">Voting & Survey</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ route('blog_posts.index') }}">Subscription</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ route('blog_posts.index') }}">My School Admission</a></li> -->
+    </ul>
+  </div>
+</li>
+
+<li class="nav-item">
+      <a class="nav-link" href="{{ route('panel_discussions.index') }}">
+        <span class="menu-title">Pannel Discussion</span>
+        <i class="mdi mdi-chart-line menu-icon"></i>
       </a>
     </li>
 
@@ -140,16 +179,16 @@
     </li>
 
     <!-- Gallery -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">
         <span class="menu-title">Gallery</span>
         <i class="mdi mdi-image-multiple menu-icon"></i>
       </a>
-    </li>
+    </li> -->
 
     <!-- Contact Us -->
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href={{ route('contacts.index') }}>
         <span class="menu-title">Contact Us</span>
         <i class="mdi mdi-phone menu-icon"></i>
       </a>
@@ -167,6 +206,7 @@
 
 
 
+ 
 
 
 
